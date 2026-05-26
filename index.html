@@ -237,6 +237,7 @@
       display: flex; gap: 16px; margin-top: 28px; flex-wrap: wrap; justify-content: center;
       animation: fadeUp 0.8s ease 0.5s both;
     }
+    .hero__ctas .cta { min-width: 210px; justify-content: center; }
     .scroll-hint {
       position: absolute; bottom: 32px; display: flex; flex-direction: column;
       align-items: center; gap: 8px; animation: gentlePulse 3s ease-in-out infinite;
@@ -307,7 +308,7 @@
 
     /* ───────── Problem statement ───────── */
     .problem { padding: var(--section-pad-y) clamp(20px, 4vw, 48px); text-align: center; }
-    .problem__intro { margin-bottom: 48px; }
+    .problem__intro { max-width: 720px; margin: 0 auto 48px; }
     .problem__intro p { margin: 16px auto 0; max-width: 680px; text-wrap: pretty; }
     .problem__statement h3 {
       font-family: var(--font-display); font-weight: 700;
@@ -349,7 +350,7 @@
 
     /* ───────── Feature grids (borderless, centered) ───────── */
     .features { padding: var(--section-pad-y) clamp(20px, 4vw, 48px); }
-    .features__head { margin-bottom: 56px; text-align: center; }
+    .features__head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
     .features__head p { margin: 14px auto 0; max-width: 680px; text-wrap: pretty; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(32px, 4vw, 52px); }
     .grid-auto { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(32px, 4vw, 52px); }
@@ -430,6 +431,8 @@
 
     /* ───────── Responsive ───────── */
     @media (max-width: 760px) {
+      .scroll-hint { display: none; }
+      .card__title { flex-direction: column; align-items: flex-start; gap: 2px; }
       .story__grid { grid-template-columns: 1fr; gap: 32px; }
       .grid-3 { grid-template-columns: 1fr; }
       .stats { grid-template-columns: 1fr; gap: 40px; }
@@ -598,15 +601,15 @@
     <div class="grid-3">
       <div class="feature feature--fuse reveal">
         <h3>Production-first</h3>
-        <p>Real app architecture, layouts, and dashboards, with patterns that hold up as your project grows.</p>
+        <p>Real app architecture, layouts, and dashboards built to grow with you.</p>
       </div>
       <div class="feature feature--fuse reveal reveal-d1">
         <h3>Long-term Angular expertise</h3>
-        <p>Built and kept current through every major Angular change for more than a decade.</p>
+        <p>Built and kept current through every major Angular release for over a decade.</p>
       </div>
       <div class="feature feature--fuse reveal reveal-d2">
         <h3>Developer experience</h3>
-        <p>Helps your team move faster without giving up structure or maintainability.</p>
+        <p>Helps your team move faster without giving up structure or long-term clarity.</p>
       </div>
     </div>
   </section>
@@ -620,19 +623,19 @@
     <div class="grid-auto">
       <div class="feature feature--bk reveal">
         <h3>Composable UI</h3>
-        <p>A flexible architecture, not a rigid template you have to fight.</p>
+        <p>A flexible architecture instead of a rigid, locked-down template.</p>
       </div>
       <div class="feature feature--bk reveal reveal-d1">
         <h3>Reusable Blocks</h3>
-        <p>Copy, paste, and tweak ready-made blocks to build faster.</p>
+        <p>Copy, paste, and customize ready-made blocks to ship faster.</p>
       </div>
       <div class="feature feature--bk reveal reveal-d2">
         <h3>Modern Angular</h3>
-        <p>Standalone components, SSR, signals, and zoneless-ready patterns you can build on.</p>
+        <p>Standalone components, signals, SSR, and zoneless-ready patterns to build on.</p>
       </div>
       <div class="feature feature--bk reveal reveal-d3">
         <h3>Designed for SaaS</h3>
-        <p>Made for dashboards, admin panels, platforms, and other serious products.</p>
+        <p>Made for dashboards, admin panels, platforms, and serious products.</p>
       </div>
     </div>
   </section>
